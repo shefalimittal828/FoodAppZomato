@@ -89,11 +89,7 @@ pipeline {
                 sh 'docker run -d --name zomato -p 3000:3000 shefalimittal828/zomato:latest'
             }
         }
-        stage ("Deploy to Container") {
-            steps {
-                sh 'docker run -d --name zomato -p 3000:3000 shefalimittal828/zomato:latest'
-            }
-        }
+        
     }
     post {
     always {
