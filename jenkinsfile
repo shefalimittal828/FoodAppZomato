@@ -15,7 +15,7 @@ pipeline {
         }
         stage ("Git Checkout") {
             steps {
-                git 'https://github.com/shefalimittal828/FoodAppZomato.git'
+                git branch: 'main', url: 'https://github.com/shefalimittal828/FoodAppZomato.git'
             }
         }
         stage("Sonarqube Analysis"){
