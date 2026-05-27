@@ -51,6 +51,8 @@ pipeline {
         }
         stage ("Build Docker Image") {
             steps {
+                // Wipe local cache layers right before building to guarantee disk space
+                sh "docker system prune -f"
                 sh "docker build -t zomato ."
             }
         }
